@@ -9653,6 +9653,7 @@ MonoBehaviour:
   childOb:
   - {fileID: 226369154}
   - {fileID: 5708631797092858989}
+  limitPosZ: -15
 --- !u!1001 &548138037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15843,10 +15844,8 @@ GameObject:
   - component: {fileID: 890532517}
   - component: {fileID: 890532516}
   - component: {fileID: 890532519}
-  - component: {fileID: 890532518}
   - component: {fileID: 890532520}
   - component: {fileID: 890532521}
-  - component: {fileID: 890532522}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -15883,20 +15882,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &890532518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890532515}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab0e80cee9cc1d44928bfe488dd1e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PointCloudPrefab: {fileID: 8410572795986937494, guid: 68fe7a1c18fa98445a4b77a7a6d7c706,
-    type: 3}
 --- !u!114 &890532519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15924,12 +15909,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93ff8fab42becc4bb7f52d88e2d933b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AnchorPrefab: {fileID: 7436166241070379800, guid: ab7127fed236fe4438d7e765f6fa0cbf,
-    type: 3}
-  arOrigin: {fileID: 890532516}
   m_RaycastManager: {fileID: 0}
-  m_AnchorManager: {fileID: 0}
   m_PlaneManager: {fileID: 0}
+  arOrigin: {fileID: 890532516}
 --- !u!114 &890532521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15943,19 +15925,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RaycastPrefab: {fileID: 0}
---- !u!114 &890532522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890532515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728ad7fae8e460a4ba41265c7308d757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AnchorPrefab: {fileID: 0}
 --- !u!1001 &892525683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76087,7 +76056,7 @@ GameObject:
   - component: {fileID: 7436166241873685645}
   - component: {fileID: 1348575093}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

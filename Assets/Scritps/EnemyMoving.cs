@@ -10,7 +10,6 @@ public class EnemyMoving : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         transform.Translate(0, 0, -speed * Time.deltaTime);
     }
 
@@ -19,8 +18,6 @@ public class EnemyMoving : MonoBehaviour
         if (other.gameObject.CompareTag("Wall"))
         {
             gameObject.SetActive(false);
-
-
         }
     }
 }

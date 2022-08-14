@@ -5,32 +5,33 @@ using UnityEngine;
 
 public class GroundRolling : MonoBehaviour
 {
-    private Vector3 originPos;
     public float speed;
-    private float limitz;
+    private float limitZ;
     public List<GameObject> childOb;
+    public float limitPosZ = -15f;
 
     private void Awake()
     {
-        originPos = childOb[0].transform.position;
-        limitz = childOb[0].transform.position.z- 15;
+        limitZ = childOb[0].transform.position.z + limitPosZ;
+        //다시 돌아올 거리 설정
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (GameManager.inst.startBool == false)
+        if (GameManager.Inst.isStart == false)
         {
             return;
         }
+
         foreach (var ob in childOb)
         {
-            ob.transform.Translate(0, 0, -speed*Time.deltaTime);
-            if (ob.transform.position.z < limitz)
+            ob.transform.Translate(0, 0, -speed * Time.deltaTime);
+            //배경 이동
+            if (ob.transform.position.z < limitZ)
+                //거리가 벗어나면 다시 돌아옴
             {
-                ob.transform.Translate(0, 0, -limitz*2);
+                ob.transform.Translate(0, 0, -limitZ * childOb.Count);
             }
         }
-        
     }
 }
